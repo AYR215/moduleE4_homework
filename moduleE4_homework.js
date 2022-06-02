@@ -4,7 +4,7 @@ class ElectricalDevice {
     this.name = name;
     this.manufacturer = manufacturer;
     this.wattage = wattage ;
-    this.devTurnOn = false;
+    this.devTurnOn = false; //true - устройство включено
   }
 
   getInfo() {
@@ -65,7 +65,7 @@ class TV extends ElectricalDevice {
   getInfo() {
     return(Телевизор ${this.name} с экраном ${this.type} (${this.screen}\'\'), производства ${this.manufacturer}, мощность - ${this.wattage} Ватт.)
   }
-
+  // метод выключения по таймеру
   turnOffTimer(timeSecond) {
     const tvName = this.name;
     let timer = setInterval(function() {
